@@ -9,6 +9,7 @@ import "dotenv/config";
 import ModuleRoutes from './Kanbas/Modules/routes.js';
 import AssignmentRouts from './Kanbas/Assignments/routes.js';
 import EnrollmentRoutes from './Kanbas/Enrollments/route.js';
+import QuizzesRouts from './Kanbas/Quizzes/route.js';
 
 
 
@@ -43,5 +44,6 @@ Hello(app)
 ModuleRoutes(app);
 AssignmentRouts(app);
 EnrollmentRoutes(app);
+QuizzesRouts(app);
 app.listen(process.env.PORT || 4000)
 
