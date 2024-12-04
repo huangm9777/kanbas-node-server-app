@@ -10,15 +10,17 @@ import ModuleRoutes from './Kanbas/Modules/routes.js';
 import AssignmentRouts from './Kanbas/Assignments/routes.js';
 import EnrollmentRoutes from './Kanbas/Enrollments/route.js';
 import QuizzesRouts from './Kanbas/Quizzes/route.js';
-
+import QuestionRoutes  from './Kanbas/Questions/routes.js';
 
 
 const app = express();
 app.use(
     cors({
         credentials: true,
-        // origin: process.env.NETLIFY_URL || "http://localhost:3000",
-        origin: true
+        origin: process.env.NETLIFY_URL || "http://localhost:3000",
+                origin: process.env.NETLIFY_URL || "http://localhost:3000",
+
+        // origin: true
     })
 );
 const sessionOptions = {
@@ -46,5 +48,6 @@ ModuleRoutes(app);
 AssignmentRouts(app);
 EnrollmentRoutes(app);
 QuizzesRouts(app);
+QuestionRoutes(app);
 app.listen(process.env.PORT || 4000)
 

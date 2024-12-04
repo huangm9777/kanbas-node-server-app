@@ -20,7 +20,7 @@ export default function QuizzesRouts(app) {
     app.put("/api/quizzes/:qid", (req, res) => {
         const { qid } = req.params;
         const quiz = req.body;
-        const status = dao.updateQuiz(qid,quiz);
+        const status = dao.updateQuiz(qid, quiz);
         res.send(status);
 
         // const { courseId } = req.params;
@@ -28,4 +28,15 @@ export default function QuizzesRouts(app) {
         // const status = dao.updateAssignment(courseId, assignment);
         // res.send(status);
     });
+    app.post("/api/quizzes/:qid", (req, res) => {
+        // const { qid } = req.params;
+        const quiz = req.body;
+        const status = dao.createQuiz(quiz);
+        // res.send(status);    
+        res.status(201).json({
+            message: "Quiz created successfully",
+            data: status, // Include the created quiz details.
+        });
+
+    })
 }

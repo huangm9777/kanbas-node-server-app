@@ -13,13 +13,18 @@ export function findQuizWithQid(qid) {
         
     return quiz;
 }
-
+ 
+export function createQuiz(quiz) {
+//   const newQuiz = { ...quiz, id: Date.now().toString() };
+  Database.quizzes = [...Database.quizzes, quiz];
+  return quiz;
+}
 // export function unpublish(qid) {
 //     const { quizzes } = Database;
 //     const dbQuizzes = quizzes.find((quiz) => quiz.qid === qid);
 //     dbQuizzes.isPublished = false;
 //     return dbQuizzes; 
-//   }
+//   } 
 
 export function updateQuiz(qid, quiz) {
     const { quizzes } = Database;

@@ -22,7 +22,9 @@ export default [
         isLockAfter: false,
         isAccessCode: true,
         isTimeLimit: true,
-        isMultiAttempts:true
+        isMultiAttempts:true,
+        instruction: "This is a quiz for the course RS101"
+
 
     },
     {
@@ -47,7 +49,8 @@ export default [
         isLockAfter: false,
         isAccessCode: false,
         isTimeLimit: false,
-        isMultiAttempts:true
+        isMultiAttempts:true,
+        instruction: "This is a quiz for the course RS101"
     },
 
 ]
