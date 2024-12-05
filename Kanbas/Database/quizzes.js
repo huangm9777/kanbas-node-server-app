@@ -23,7 +23,7 @@ export default [
         isAccessCode: true,
         isTimeLimit: true,
         isMultiAttempts:true,
-        instruction: "This is a quiz for the course RS101"
+        instruction: "<h1>This is a quiz for the course RS101</h1>"
 
 
     },
@@ -50,7 +50,7 @@ export default [
         isAccessCode: false,
         isTimeLimit: false,
         isMultiAttempts:true,
-        instruction: "This is a quiz for the course RS101"
+        instruction: "<p>This is a quiz for the course RS101</p>"
     },
 
 ]

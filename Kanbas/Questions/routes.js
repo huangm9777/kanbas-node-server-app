@@ -10,5 +10,22 @@ export default function QuestionRoutes(app) {
         res.send(questions);
     });
 
+    app.get("/api/question/:quId", (req, res) => {
+        const { quId } = req.params;
+        const question = dao.findQuestionWithQuId(quId);
+        res.send(question);
+    });
+
+
+
+    app.post("/api/question/:quId", (req, res) => {
+        // const { quId } = req.params;
+        const question = {
+            ...req.body,
+        };
+        const newQuestion = dao.saveQuestion(question);
+        res.send(newQuestion);
+    });
+
 
 }
