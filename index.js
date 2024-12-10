@@ -11,7 +11,12 @@ import AssignmentRouts from './Kanbas/Assignments/routes.js';
 import EnrollmentRoutes from './Kanbas/Enrollments/route.js';
 import QuizzesRouts from './Kanbas/Quizzes/route.js';
 import QuestionRoutes  from './Kanbas/Questions/routes.js';
+import mongoose from "mongoose";
 
+
+// mongoose
+const CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas"
+mongoose.connect(CONNECTION_STRING);
 
 const app = express();
 app.use(

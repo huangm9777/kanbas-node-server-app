@@ -28,6 +28,14 @@ export function saveQuestion(question) {
         // updating existing question
         Object.assign(dbQuestion, question);
     }
-    // console.log(questions);
+    
     return question;
 }
+
+
+export function deleteQuestion(quid) {
+    const { questions } = Database;
+    Database.questions = questions.filter((question) => question.quid === quid);
+    // console.log(Database.questions);
+   }
+   

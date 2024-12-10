@@ -28,4 +28,10 @@ export default function QuestionRoutes(app) {
     });
 
 
+    app.delete("/api/question/:quId", async (req, res) => {
+        const { quId } = req.params;
+        const status = await dao.deleteQuestion(quId);
+        res.send(status);
+    });
+
 }
